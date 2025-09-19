@@ -1,0 +1,230 @@
+.light-section {
+  width: 100%;
+  padding: 80px 10%;
+  background: rgb(255,255,255);
+  box-sizing: border-box;
+}
+
+
+.light-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+
+.light-left {
+  margin-top: 7rem;
+  flex: 1;
+  text-align: center;
+}
+
+.light-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.light-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.light-right-top h1 {
+  font-size: 56px;
+  color: rgb(46, 24, 106);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.light-right-top p {
+  font-family: "Motiva Sans Light", sans-serif;
+  font-weight: 300;
+  margin: 1.5rem 0px 2rem;
+  font-size: 21px;
+  color: rgb(24,33,109);
+  line-height: 1.41;
+}
+
+
+.light-right-bottom {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.light-card {
+  flex: 1;
+  min-width: 200px;
+  background: rgb(255,255,255);
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+}
+
+.card-icon {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.light-card h3 {
+  font-size: 1rem;
+  color: rgb(46, 24, 10);
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.light-card p {
+  font-family: "Motiva Sans", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: rgb(24,33,109);
+  line-height: 1.41;
+  margin-bottom: 1rem;
+}
+
+/* Responsive  for different screen */
+
+/* Extra Small screens ≤425px - Image above content, cards side by side */
+@media (max-width: 425px) {
+  .light-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .light-left {
+    order: -1; 
+    margin-top: 0;
+    width: 100%; 
+  }
+
+  .light-left img {
+    max-width: 100%;
+    height: 100%; 
+    vertical-align: middle;
+  }
+
+  .light-right-top h1 {
+    font-size: 32px;
+    margin-top: 1rem;
+    margin-left: -3rem;
+  }
+
+  .light-right-top {
+    font-size: 21px;
+    line-height: 1.41;
+    margin-left: -2rem;
+  }
+
+ 
+   .light-right-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 10px;
+    flex-wrap: wrap;  
+    margin-bottom: -1rem;     
+  }
+
+  .light-card {
+    flex: 1 1 45%;        
+    min-width: auto;       
+    box-sizing: border-box;
+  }
+
+}
+
+
+/* Small screens 426px–768px */
+@media (min-width: 426px) and (max-width: 768px) {
+  .light-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .light-left {
+    order: -1; 
+    margin-top: 0;
+  }
+
+  .light-right-top h1 {
+    font-size: 2rem;
+  }
+
+  .light-right-top p {
+    font-size: 21px;
+  }
+
+  .light-right-bottom {
+    display: flex;
+    flex-direction: row; /* cards side by side */
+    gap: 15px;
+  }
+
+  .light-card {
+    min-width: 140px;
+  }
+}
+
+/* Medium screens ≥768px */
+@media (min-width: 768px) {
+  .light-top {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .light-left {
+    margin-top: 7rem;
+  }
+
+  .light-right-top h1 {
+    font-size: 2.5rem;
+  }
+
+  .light-right-top p {
+    font-size: 1.1rem;
+  }
+
+  .light-right-bottom {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .light-card {
+    min-width: 200px;
+  }
+ .light-right-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 10px;
+    flex-wrap: wrap;  
+    margin-bottom: -1rem;     
+  }
+
+  .light-card {
+    flex: 1 1 45%;        
+    min-width: auto;       
+    box-sizing: border-box;
+  }
+
+
+}
+
+/* Large screens ≥1024px */
+@media (min-width: 1024px) {
+  .light-right-top h1 {
+    font-size: 3rem;
+  }
+
+  .light-right-top p {
+    font-size: 1.2rem;
+  }
+}

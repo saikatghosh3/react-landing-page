@@ -1,0 +1,167 @@
+/* Navbar Container */
+.navbar {
+  width: 100%;
+  background: rgb(255,255,255);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo img {
+  margin-top: 5px;
+  height: 35px;
+  width: auto;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgb(24, 33, 109);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: rgb(255, 130, 92);
+  text-decoration: underline wavy rgb(255, 130, 92);
+}
+
+/* Contact Button */
+.contact-btn {
+  font-size: 1rem;
+  padding: 13px 0px;
+  background: rgb(46, 24, 106);
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 180px;
+  box-shadow: rgba(23, 31, 114, 0.2) 0px 16px 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+  background: rgb(255, 130, 92);
+}
+
+/* Hamburger Icon */
+.nav-toggle {
+  /* min-height: 800px; */
+  display: none;
+  cursor: pointer;
+  color: rgb(46, 24, 106);
+  z-index: 1100; /* make sure it's above nav-links */
+}
+
+/* Mobile Responsive ≤768px */
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 92%; /* mobile: 90% */
+    max-width: 400px; 
+    background: white;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    /* border-left: 2px solid rgb(46, 24, 106); */
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    transform: translateX(0); /* slide in */
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    z-index: 1101; /* above sidebar */
+  }
+
+  .nav-logo {
+    display: block; 
+    height: 64px;
+    width: 101px;
+  }
+}
+
+/* Tablets and up (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-links {
+    gap: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Larger screens (apply sidebar width = 70%) */
+@media (min-width: 1025px) {
+  .nav-links {
+    width: 70%; /* desktop sidebar 70% */
+  }
+}
+
+
+/* Medium screens 769–1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* .nav-links {
+    gap: 40px;
+    font-size: 1.2rem;
+  }
+} */
+
+
+.nav-links {
+    gap: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Large screens 1025–1920px */
+@media (min-width: 1025px) and (max-width: 1920px) {
+  /* .nav-links {
+    gap: 50px;
+    font-size: 1.25rem;
+  } */
+  .nav-links {
+    width: 70%; /* desktop sidebar 70% */
+  }
+
+
+}
+
+/* Extra large screens >1920px */
+@media (min-width: 1921px) {
+  .nav-container {
+    max-width: 1600px;
+    padding: 20px 40px;
+  }
+  .nav-links {
+    gap: 60px;
+    font-size: 1.3rem;
+  }
+}

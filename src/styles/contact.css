@@ -1,0 +1,176 @@
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 10%;
+  margin-top: 1rem;
+}
+
+.contact-left {
+  margin-top: 7rem;
+  flex: 1;
+}
+
+.contact-left h2 {
+  font-family: "Motiva Sans Bold", serif;
+  font-size: 56px;
+  color: rgb(24,33,109);
+  line-height: 1.18;
+  margin-bottom: 20px;
+}
+
+.contact-left p {
+  font-family: "Motiva Sans", sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 1.41;
+  color: rgb(24,33, 109);
+  padding-bottom: 1rem;
+}
+
+.contact-right {
+  flex: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid black;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.btn-wrapper {
+  text-align: right;
+}
+
+.submit-btn {
+  width: 30%;
+  background-color: rgb(24,33, 109);
+  font-weight: 700;
+  color: white;
+  padding: 13px 0px;
+  font-size: 16px;
+  border: 1px solid rgb(237,243,245);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: rgb(255,130,92);
+}
+
+/* Mobile ≤425px: stack vertically (Content above, Form below) */
+@media (max-width: 425px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 5%;
+    text-align: center;
+  }
+
+  .contact-left {
+    order: 1; 
+    margin-top: 2rem;
+  }
+
+  .contact-right {
+    order: 2; 
+    width: 100%;
+  }
+  .contact-right label{
+   
+     margin-left: -12rem;
+     margin-right: 2rem;
+    }
+    
+
+  .contact-left h2 {
+    font-size: 2rem;
+    line-height: 1.18;
+    margin-bottom: .5em;
+    margin-left: -4rem;
+  }
+
+  .contact-left p {
+
+    font-size: 21px;
+    margin-top: 1.5rem;
+    line-height: 1.41;
+    margin-bottom: 1em;
+    margin-left: -1rem;
+  }
+
+  .submit-btn {
+    width: 50%;
+    border-radius: none;
+  }
+}
+
+/*  Tablet ≥768px: side by side again */
+@media (min-width: 768px) {
+  .contact-section {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .contact-left h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-left p {
+    font-size: 1.1rem;
+  }
+
+  .submit-btn {
+    width: 40%;
+  }
+}
+
+/*  Desktop ≥1024px */
+@media (min-width: 1024px) {
+  .contact-left h2 {
+    font-size: 3rem;
+  }
+
+  .contact-left p {
+    font-size: 1.2rem;
+  }
+}
+
+/*  Large Screens ≥1920px */
+@media (min-width: 1920px) {
+  .contact-left h2 {
+    font-size: 3.5rem;
+  }
+
+  .contact-left p {
+    font-size: 1.3rem;
+  }
+}
