@@ -2,7 +2,8 @@
 
 import './App.css'
 import Navbar from './components/Navbar'
-import Hero from './components/hero'
+
+import Hero from './components/Hero'
 import Introduce from './components/Introduce'
 import LightSection from './components/LightSection'
 import ReadyMadeSection from './components/ReadyMadeSection'
