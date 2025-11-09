@@ -1,7 +1,7 @@
 
 
 import './App.css'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import Hero from './components/hero'
 import Introduce from './components/Introduce'
 import LightSection from './components/LightSection'
